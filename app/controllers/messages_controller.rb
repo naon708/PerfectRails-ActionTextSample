@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   # GET /messages or /messages.json
   def index
-    @messages = Message.all
+    @messages = Message.with_rich_text_content
   end
 
   # GET /messages/1 or /messages/1.json
